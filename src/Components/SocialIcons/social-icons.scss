@@ -1,0 +1,8 @@
+.social-icons {
+  width: 30px;
+  height: 30px;
+  &__icon {
+    object-fit: cover;
+    object-position: center;
+  }
+}

@@ -1,0 +1,51 @@
+@import '../../styles/variables.scss';
+
+.btn {
+  padding: 15px 20px;
+  background-color: $color-btn;
+  border-radius: 7px;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 5px;
+  color: $color-main;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.03);
+  }
+  &__text {
+    display: block;
+  }
+}
+.btn-img {
+  width: 180px;
+  height: 56px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 1);
+
+}
+
+@media (max-width: 992px) {
+  .btn {
+    width: 100%;
+    &__text {
+      display: none;
+      &--phone {
+        display: flex;
+      }
+    }
+  }
+  .btn-img {
+    width: 100%;
+    & > img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
