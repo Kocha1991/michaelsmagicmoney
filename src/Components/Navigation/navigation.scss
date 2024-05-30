@@ -1,9 +1,11 @@
 @import '../../styles/variables.scss';
 
 .header {
+  position: relative;
   width: 100%;
   height: 90px;
   background-color: $color-main;
+  z-index: 101;
   &__nav-web {
     height: 100%;
     padding: 0 50px;
@@ -22,11 +24,15 @@
     display: none;
     width: 100%;
     height: 100%;
+    padding: 0 20px;
     &__wrapper {
+      position: relative;
+      background-color: $color-main;
       height: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      z-index: 20;
     }
   }
 }
@@ -43,22 +49,6 @@
       display: block;
       position: static;
       z-index: 99;
-    }
-  }
-}
-.social {
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  &__icon {
-    cursor: pointer;
-    img {
-      transition: transform $transition;
-    }
-    &:hover img {
-      transform: scale(1.1);
     }
   }
 }

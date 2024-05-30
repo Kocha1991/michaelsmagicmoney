@@ -1,4 +1,41 @@
 @import './styles/variables.scss';
+@import './styles/extend.scss';
+
+ @font-face {
+  font-family: "Archivo";
+  src: url("./fonts/Archivo_Expanded-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+ }
+ @font-face {
+  font-family: "Keneda";
+  src: url("./fonts/fonnts.com-Kaneda_Gothic_Bold.otf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+ }
+ @font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+ }
+ @font-face {
+  font-family: "Proxima-reg";
+  src: url("./fonts/Mark\ Simonson\ \ Proxima\ Nova\ Regular.otf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+ }
+ @font-face {
+  font-family: "Proxima-bold";
+  src: url("./fonts/Mark\ Simonson\ \ Proxima\ Nova\ Bold.otf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+ }
 
 * {
   box-sizing: border-box;
@@ -12,19 +49,203 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+  background-color: $color-main;
 
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+// reused classes
 .container {
-  max-width: 1480px;
+  max-width: 1440px;
   height: 100%;
   margin: 0 auto;
-  padding: 0 20px;
 }
+.main-padding {
+  padding-bottom: 60px;
+  @media (max-width: 992px) {
+    padding-bottom: 30px;
+  }
+}
+
+// section classes
 .App {
-  background-color: $color-main;
+  height: 100%;
+}
+.main {
+  position: relative;
+  width: 100%;
+  background-image: url('./image/banner-main.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &__person-img {
+    position: relative;
+    width: 90%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  & > .banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.tokenomics {
+  width: 100%;
+  position: relative;
+  padding-top: 60px;
+  @media (max-width: 992px) {
+    padding-top: 30px;
+  }
+  &__bg {
+    display: flex;
+    align-items: end;
+    padding: 40px;
+    width: 100%;
+    min-height: 823px;
+    background-image: url('./image/banner-tokenomic.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    @extend .shadow;
+    @media (max-width: 992px) {
+      padding: 32px 20px;
+      min-height: 100%;
+      background-image: none;
+      box-shadow: none;
+    }
+    &--phone{
+      display: none;
+      width: 100%;
+      height: 400px;
+      background-image: url('./image/banner-tokenomic.jpg');
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+      @media (max-width: 992px) {
+        display: block;
+      }
+      @media (max-width: 700px) {
+        height: 320px;
+      }
+      @media (max-width: 480px) {
+        height: 220px;
+      }
+    }
+  }
+  &__cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    @media (max-width: 992px) {
+      gap: 10px;
+    }
+  }
+}
+.game {
+  width: 100%;
+  background: #000;
+  &__bg {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    height: 771px;
+    background-image: url('./image/buner2.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  &__wrapper {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+  & .btn--game {
+    width: 359px;
+    height: 94px;
+    padding: 15px 25px;
+    background-color: rgba(254, 20, 33, 1);
+    color: $color-btn;
+  }
+}
+.footer {
+  position: relative;
+  padding: 60px 70px;
+  width: 100%;
+  min-height: 450px;
+  background-image: url('./image/footer.jpg');
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: cover;
+  @media (max-width: 1201px) {
+    min-height: 220px;
+    padding: 40px 50px;
+
+  }
+  @media (max-width: 992px) {
+    padding: 30px;
+  }
+  @media (max-width: 480px) {
+    padding: 20px;
+  }
+  &__wrapper {
+    position: relative;
+    z-index: 10;
+    max-width: 570px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__text {
+    font-family: "Proxima-reg";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: $color-btn;
+    @media (max-width: 992px) {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+  }
+  &__input {
+    margin-bottom: 67px;
+    width: 100%;
+    @media (max-width: 992px) {
+      margin-bottom: 20px;
+    }
+  }
+  &__icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__detox {
+    margin-left: 20px;
+    & > img {
+      object-fit: contain;
+      width: 230px;
+      @media (max-width: 992px) {
+        width: 120px;
+      }
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(6, 24, 44, 0.62);
+    z-index: 1;
+  }
 }

@@ -1,0 +1,20 @@
+@import '../../styles/variables.scss';
+@import '../../styles/extend.scss';
+
+.social {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  &__icon {
+    cursor: pointer;
+    img {
+      transition: all $transition;
+    }
+    &:hover img {
+      @extend .shadow;
+      transform: scale(1.1);
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.input-block {
+  position: relative;
+  &__input {
+    width: 100%;
+    height: 55px;
+    padding: 10px 60px;
+    border-radius: 50px;
+    @media (max-width: 992px) {
+      height: 47px;
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    width: 25px;
+    height: 25px;
+    background-image: url('../../image/input-icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+  }
+  &::before {
+    content: 'CA:';
+    position: absolute;
+    color: #000;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 30px;
+    width: 20px;
+    height: 20px;
+    font-family: "Proxima-reg";
+    font-weight: 400;
+  }
+}

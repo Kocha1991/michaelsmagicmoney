@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@import '../../../styles/variables.scss';
 
 .nav-menu {
   display: flex;
@@ -13,7 +13,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  transition: transform 1.2s ease-in-out;
+  transition: transform 1s ease-in-out;
   z-index: 10;
   &.open {
     transform: translateY(0);
@@ -25,5 +25,14 @@
     justify-content: center;
     flex-direction: column;
     gap: 20px;
+    & > .btn--game {
+      background-color: rgba(0, 0, 0, 1);
+      width: 100%;
+      & > img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
   }
 }

@@ -1,14 +1,14 @@
 import React from "react";
-import logo from "../../image/logo.png";
-
 import './logo.scss';
+
+import LogoImg from '../../image/logo.png';
 
 const Logo = () => {
   return (
     <div className='logo'>
       <img 
-        src={logo}
-        alt="logo"
+        src={LogoImg}
+        alt='logo-img'
         className='logo__img'
       />
     </div>

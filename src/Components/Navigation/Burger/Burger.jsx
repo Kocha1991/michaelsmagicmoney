@@ -1,7 +1,6 @@
 import React from "react";
 
 import './burger.scss'; 
-import '../../styles/_variables.scss';
 
 const Burger = ({ open, setOpen }) => {
   return (
