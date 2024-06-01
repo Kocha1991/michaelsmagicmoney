@@ -80,16 +80,15 @@ code {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  &__wrapper {
+    display: flex;
+    align-items: end;
+  }
   &__person-img {
     position: relative;
     width: 90%;
     object-fit: cover;
     z-index: 1;
-  }
-  & > .banner {
-    position: absolute;
-    top: 0;
-    left: 0;
   }
 }
 .tokenomics {
@@ -151,40 +150,108 @@ code {
   background: #000;
   &__bg {
     display: flex;
-    align-items: center;
-    justify-content: end;
     width: 100%;
     height: 771px;
+    position: relative;
     background-image: url('./image/buner2.jpg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    @media (max-width: 1440px) {
+      height: 630px;
+    }
+    @media (max-width: 1220px) {
+      height: 520px;
+    }
+    @media (max-width: 992px) {
+      height: 420px;
+    }
+    @media (max-width: 785px) {
+      height: 320px;
+    }
+    @media (max-width: 481px) {
+      height: 220px;
+    }
   }
-  &__wrapper {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-  }
-  & .btn--game {
-    width: 359px;
-    height: 94px;
-    padding: 15px 25px;
-    background-color: rgba(254, 20, 33, 1);
-    color: $color-btn;
+  .game__btn {
+    position: absolute;
+    bottom: 40%;
+    right: 18%;
+    @media (max-width: 1440px) {
+      bottom: 35%;
+      right: 20%;
+    }
+    @media (max-width: 1220px) {
+      bottom: 30%;
+      right: 16%;
+    }
+    @media (max-width: 992px) {
+      bottom: 40%;
+      right: 22%;
+    }
+    @media (max-width: 785px) {
+      bottom: 34%;
+      right: 18%;
+    }
+    @media (max-width: 605px) {
+      bottom: 31%;
+      right: 10%;
+    }
+    @media (max-width: 481px) {
+      bottom: 36%;
+      right: 18%;
+    }
+    & .btn--game {
+      width: 359px;
+      height: 94px;
+      padding: 15px 25px;
+      background-color: rgba(254, 20, 33, 1);
+      border-radius: 20px;
+      color: $color-btn;
+      @media (max-width: 992px) {
+        width: 220px;
+        height: 52px;
+      }
+      @media (max-width: 481px) {
+        width: 100px;
+        height: 32px;
+      }
+    }
   }
 }
+.swap {
+  &__wrapper-bg {
+    width: 100%;
+    height: 567px;
+    padding: 35px 80px;
+    background-image: url('./image/buner-swap.jpg');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @extend .shadow;
+    @media (max-width: 992px) {
+      height: 525px;
+      padding: 20px;
+    }
+  }
+  &__box {
+    width: 567px;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}
+
 .footer {
   position: relative;
-  padding: 60px 70px;
+  padding: 110px 70px;
   width: 100%;
-  min-height: 450px;
+  min-height: 220px;
   background-image: url('./image/footer.jpg');
   background-repeat: no-repeat;
   background-position: top right;
   background-size: cover;
   @media (max-width: 1201px) {
-    min-height: 220px;
     padding: 40px 50px;
 
   }

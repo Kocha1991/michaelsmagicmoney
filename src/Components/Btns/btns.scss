@@ -27,7 +27,7 @@
   }
 }
 .btn--game {
-  min-width: 180px;
+  min-width: 100px;
   height: 56px;
   border-radius: 7px;
   display: flex;
@@ -40,7 +40,12 @@
   font-weight: 800;
   line-height: 26px;
   cursor: pointer;
-
+  @media (max-width: 992px) {
+    font-size: 30px;
+  }
+  @media (max-width: 481px) {
+    font-size: 18px;
+  }
   &:hover {
     @extend .shadow;
     transform: scale(1.03);

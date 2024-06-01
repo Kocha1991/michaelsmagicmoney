@@ -31,6 +31,18 @@ const Navigation = () => {
   const node = React.useRef();
   useOnClickOutside(node, () => setOpen(false));
 
+  React.useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [open]);
+
   return (
     <div className='header'>
       <div className='container'>

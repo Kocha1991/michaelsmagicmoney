@@ -1,7 +1,27 @@
 import React from 'react';
-import { iconsSocial } from '../../js/bd.js';
+
+
+//import social-icons 
+import Telegram from '../../image/telegram.svg';
+import X from '../../image/X.svg';
+import Dextools from '../../image/dextools.svg';
 
 import './socialIcons.scss';
+
+const iconsSocial = [
+  {
+    src: Telegram,
+    alt: 'telegram-icon'
+  },
+  {
+    src: X,
+    alt: 'x-icon'
+  },
+  {
+    src: Dextools,
+    alt: 'dextools-icon'
+  }
+];
 
 const SocialIcon = () => {
   return (
