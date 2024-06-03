@@ -241,6 +241,11 @@ code {
     }
   }
 }
+.phases {
+  &__wrapper {
+    display: flex;
+  }
+}
 
 .footer {
   position: relative;

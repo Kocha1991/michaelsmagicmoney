@@ -1,0 +1,89 @@
+@import '../../styles/variables.scss';
+
+.card-wrappwer {
+  margin-left: 30px;
+}
+.number-line {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(0, 121, 255, 1);
+  margin-bottom: 30px;
+  font-family: "Inter";
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 25.6px;
+  text-align: left;
+  color: $color-btn;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 18px;
+    height: 18px;
+    background-image: url('../../image/done-icon.svg');
+    background-repeat: no-repeat;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 48px;
+    width: 100vw;
+    height: 3px;
+    background-color: $color-btn;
+  }
+}
+.card {
+  width: 320px;
+  padding: 25px;
+  background-color: $color-btn;
+  border-radius: 0px 10px 10px 10px;
+  @media (max-width: 769px) {
+    width: 95%;
+  }
+  & > h3 {
+    display: inline-flex;
+    font-family: "Keneda";
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 21.6px;
+    letter-spacing: 0.08em;
+    text-align: left;
+    background: linear-gradient(96.79deg, #EA4C89 0%, #4D44C6 60%);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 10px;
+  }
+  & > h2 {
+    font-family: "Keneda";
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 28.8px;
+    letter-spacing: 0.08em;
+    text-align: left;
+    margin-bottom: 16px;
+  }
+  & > div > p {
+    font-family: 'Proxima-reg';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+  & > img {
+    margin-top: 16px;
+    border-radius: 10px;
+    width: 100%;
+  }
+}
+// .swiper-button-prev {
+//   width: 62px;
+//   height: 62px;
+//   background: rgba(0, 121, 255, 1);
+//   border-radius: 50%;
+// }
