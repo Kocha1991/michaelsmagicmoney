@@ -1,4 +1,4 @@
-import React, {useRef, useEffect, useState} from 'react';
+import React, {useRef} from 'react';
 import Nav from './Components/Navigation/Navigation.jsx';
 import OptionCard from './Components/OptionCard/OptionCard.jsx';
 import Input from './Components/Input/Input.jsx';
@@ -22,6 +22,10 @@ import 'swiper/css/scrollbar';
 // images
 import PersonImg from './image/main-person.png';
 import Detox from './image/DEXTools_+white.png.png';
+import PersonGame from './image/game-person-phg.png';
+import Game from './image/game-png.png';
+
+
 
 // //import gifs
 import Gif1 from './image/GIF/Figure → send+it+lol.gif.gif';
@@ -58,26 +62,6 @@ const images = [
 
 function App() {
   const swiperRef = useRef(null);
-  const [slidesPerView, setSlidesPerView] = useState(getSlidesPerView());
-
-  function getSlidesPerView() {
-    const width = window.innerWidth;
-    if (width >= 1300) return 4;
-    if (width >= 992) return 3;
-    if (width >= 769) return 2;
-    return 1;
-  }
-
-  useEffect(() => {
-    const handleResize = () => {
-      setSlidesPerView(getSlidesPerView());
-    };
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
   return (
     <div className="App">
@@ -132,15 +116,15 @@ function App() {
           </div>
         </div>
       </section>
-      <section className='main-padding'>
-        <div className='game'>
-          <div className="container">
-            <div className="game__bg">
-              <div className='game__btn'>
-                <BtnGame
-                  text='The Game!'
-                />
-              </div>
+      <section className='game'>
+        <div className="container">
+          <div className="game__bg">
+            <img src={PersonGame} alt="bg" className='game__person'/>
+            <div className='game__btn-blok'>
+              <img src={Game} alt="game" className='game__img'/>
+              <BtnGame
+                text='The Game!'
+              />
             </div>
           </div>
         </div>
@@ -163,8 +147,22 @@ function App() {
               ref={swiperRef}
               modules={[Navigation, A11y]}
               spaceBetween={30}
-              slidesPerView={slidesPerView}
-              navigation
+              slidesPerView={1}
+              breakpoints={{
+                780: {
+                  slidesPerView: 2
+                },
+                1060: {
+                  slidesPerView: 3
+                },
+                1400: {
+                  slidesPerView: 4
+                }
+              }}
+              navigation={{
+                prevEl: '.swiper-button-prev',
+                nextEl: '.swiper-button-next',
+              }}
               onSlideChange={() => console.log('slide change')}
               onSwiper={(swiper) => console.log(swiper)}
             >
@@ -245,7 +243,12 @@ function App() {
                   gif={Gif5}
                 />
               </SwiperSlide>
+              
             </Swiper>
+            <div className='phases__nav-btns'>
+              <div className='swiper-button-prev'/>
+              <div className='swiper-button-next'/>
+            </div>
           </div>
         </div>
       </section>
