@@ -10,7 +10,6 @@ import Card from './Components/Card/Card.jsx';
 import { Navigation, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-
 //styles
 import './index.scss';
 import 'swiper/css';
@@ -24,8 +23,6 @@ import PersonImg from './image/main-person.png';
 import Detox from './image/DEXTools_+white.png.png';
 import PersonGame from './image/game-person-phg.png';
 import Game from './image/game-png.png';
-
-
 
 // //import gifs
 import Gif1 from './image/GIF/Figure → send+it+lol.gif.gif';

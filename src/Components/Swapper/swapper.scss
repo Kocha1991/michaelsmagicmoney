@@ -6,16 +6,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  &__header {
+    width: 100%;
+    position: relative;
+  }
   &__subheader {
+    display: flex;
+    justify-content: center;
     font-family: "Keneda";
     font-size: 70px;
     font-weight: 900;
     letter-spacing: 4px;
     color: $color-btn;
     margin-bottom: 10px;
-    @media (max-width: 481px) {
-      font-size: 40px;
-    }
+  }
+  &__connected {
+    width: 100%;
+    height: 25px;
+    font-size: 14px;
+    color: $color-btn;
+    margin-bottom: 5px;
   }
   &__box {
     position: relative;
@@ -25,6 +35,15 @@
     width: 100%;
     height: 310px;
     margin-bottom: 30px;
+  }
+  &__btns{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    @media (max-width: 992px) {
+      flex-direction: column;
+    }
   }
   &__change-btn {
     position: absolute;
@@ -53,5 +72,8 @@
     width: 100%;
     background: rgba(0, 121, 255, 1);
     color: $color-btn;
+    & path {
+      stroke: $color-btn;
+    }
   }
 }
