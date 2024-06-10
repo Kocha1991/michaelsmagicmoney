@@ -20,24 +20,24 @@ import 'swiper/css/scrollbar';
 
 // images
 import PersonImg from './image/main-person.png';
-import Detox from './image/DEXTools_+white.png.png';
+import Detox from './image/DEXTools_+white.png';
 import PersonGame from './image/game-person-phg.png';
 import Game from './image/game-png.png';
 
 // //import gifs
-import Gif1 from './image/GIF/Figure → send+it+lol.gif.gif';
-import Gif2 from './image/GIF/Figure → PAPER+vs+jeets.gif.gif';
-import Gif3 from './image/GIF/Figure → PAPER+Trending.jpg.jpg';
-import Gif4 from './image/GIF/Figure → PAPER+Marketing.gif.gif';
-import Gif5 from './image/GIF/Figure → PAPER+Holders.gif.gif';
-import Gif6 from './image/GIF/Figure → paper+flash.gif.gif';
-import Gif7 from './image/GIF/Figure → missing+out.jpg.jpg';
-import Gif8 from './image/GIF/Figure → ATH.gif.gif';
-import Gif9 from './image/GIF/Figure → BUYING+PAPER.jpg.jpg';
-import Gif10 from './image/GIF/Figure → EAT+THE+PAPER.gif.gif';
+import Gif1 from './image/GIF/Figure → send+it+lol.gif';
+import Gif2 from './image/GIF/Figure → PAPER+vs+jeets.gif';
+import Gif3 from './image/GIF/Figure → PAPER+Trending.jpg';
+import Gif4 from './image/GIF/Figure → PAPER+Marketing.gif';
+import Gif5 from './image/GIF/Figure → PAPER+Holders.gif';
+import Gif6 from './image/GIF/Figure → paper+flash.gif';
+import Gif7 from './image/GIF/Figure → missing+out.jpg';
+import Gif8 from './image/GIF/Figure → ATH.gif';
+import Gif9 from './image/GIF/Figure → BUYING+PAPER.jpg';
+import Gif10 from './image/GIF/Figure → EAT+THE+PAPER.gif';
 import Gif11 from './image/GIF/Figure → get+in+paper.gif';
-import Gif12 from './image/GIF/Figure → jeets+gone+lol.gif.gif';
-import Gif13 from './image/GIF/Figure → loading+up+on+paper.gif.gif';
+import Gif12 from './image/GIF/Figure → jeets+gone+lol.gif';
+import Gif13 from './image/GIF/Figure → loading+up+on+paper.gif';
 import Gif14 from './image/GIF/Figure → SPANK.gif';
 
 const images = [
