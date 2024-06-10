@@ -13,7 +13,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 //styles
 import './index.scss';
 import 'swiper/css';
-import 'swiper/css';
+// import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
@@ -25,20 +25,20 @@ import PersonGame from './image/game-person-phg.png';
 import Game from './image/game-png.png';
 
 // //import gifs
-import Gif1 from './image/GIF/Figure → send+it+lol.gif';
-import Gif2 from './image/GIF/Figure → PAPER+vs+jeets.gif';
-import Gif3 from './image/GIF/Figure → PAPER+Trending.jpg';
-import Gif4 from './image/GIF/Figure → PAPER+Marketing.gif';
-import Gif5 from './image/GIF/Figure → PAPER+Holders.gif';
-import Gif6 from './image/GIF/Figure → paper+flash.gif';
-import Gif7 from './image/GIF/Figure → missing+out.jpg';
-import Gif8 from './image/GIF/Figure → ATH.gif';
-import Gif9 from './image/GIF/Figure → BUYING+PAPER.jpg';
-import Gif10 from './image/GIF/Figure → EAT+THE+PAPER.gif';
-import Gif11 from './image/GIF/Figure → get+in+paper.gif';
-import Gif12 from './image/GIF/Figure → jeets+gone+lol.gif';
-import Gif13 from './image/GIF/Figure → loading+up+on+paper.gif';
-import Gif14 from './image/GIF/Figure → SPANK.gif';
+import Gif1 from './image/GIF/send+it+lol.gif';
+import Gif2 from './image/GIF/PAPER+vs+jeets.gif';
+import Gif3 from './image/GIF/PAPER+Trending.jpg';
+import Gif4 from './image/GIF/PAPER+Marketing.gif';
+import Gif5 from './image/GIF/PAPER+Holders.gif';
+import Gif6 from './image/GIF/paper+flash.gif';
+import Gif7 from './image/GIF/missing+out.jpg';
+import Gif8 from './image/GIF/ATH.gif';
+import Gif9 from './image/GIF/BUYING+PAPER.jpg';
+import Gif10 from './image/GIF/EAT+THE+PAPER.gif';
+import Gif11 from './image/GIF/get+in+paper.gif';
+import Gif12 from './image/GIF/jeets+gone+lol.gif';
+import Gif13 from './image/GIF/loading+up+on+paper.gif';
+import Gif14 from './image/GIF/SPANK.gif';
 
 const images = [
   { src: Gif1, alt: 'send+it+lol' },
