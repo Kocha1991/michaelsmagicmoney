@@ -5,13 +5,20 @@ import './optionCard.scss';
 type OptionCardProps = {
   subHeader: string;
   text?: string;
-  href: string
+  href: string;
+  variant: "link" | "not-link";
 }
 
 
-const OptionCard:React.FunctionComponent<OptionCardProps> = ({subHeader, text, href}) => {
+const OptionCard:React.FunctionComponent<OptionCardProps> = ({subHeader, text, href, variant}) => {
+  const handleClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    if (variant === "not-link") {
+      event.preventDefault();
+    }
+  };
+
   return (
-    <a href={href} className='option-card'>
+    <a href={href} className='option-card' onClick={handleClick} target='_blank' rel="noreferrer">
       <h2 className='option-card__subheader'>
         {subHeader}
       </h2>

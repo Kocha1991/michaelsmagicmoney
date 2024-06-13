@@ -2,7 +2,7 @@ import styles from '../styles/Connectors.module.css'
 import { connectors, getConnectorName, Web3Connector } from '../connectors'
 import { useCallback } from 'react'
 
-function Connector({ web3Connector }: { web3Connector: Web3Connector }) {
+function Connector({ web3Connector, order  }: { web3Connector: Web3Connector, order: number }) {
   const [connector, hooks] = web3Connector
   const isActive = hooks.useIsActive()
   const onClick = useCallback(() => {
@@ -15,7 +15,7 @@ function Connector({ web3Connector }: { web3Connector: Web3Connector }) {
   }, [connector, isActive])
 
   return (
-    <div className={styles.connector}>
+    <div className={styles.connector} id={`connector-${order + 1}`}>
       <label>{getConnectorName(connector)}</label>
       <button onClick={onClick}>{isActive ? 'Disconnect' : 'Connect'}</button>
       <svg className={[styles.status, isActive && styles.active].join(' ')} viewBox="0 0 2 2">
@@ -27,9 +27,9 @@ function Connector({ web3Connector }: { web3Connector: Web3Connector }) {
 
 export default function Connectors() {
   return (
-    <div className={styles.connectors}>
+    <div className={styles.connectors} id='connector-block'>
       {connectors.map((web3Connector, index) => (
-        <Connector key={index} web3Connector={web3Connector} />
+        <Connector key={index} web3Connector={web3Connector} order={index} />
       ))}
     </div>
   )

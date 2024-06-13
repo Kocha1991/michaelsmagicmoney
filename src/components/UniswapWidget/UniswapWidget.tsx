@@ -7,7 +7,7 @@ import Web3Connectors from '../Web3Connectors'
 // ↓↓↓ Don't forget to import the widgets' fonts! ↓↓↓
 import '@uniswap/widgets/fonts.css'
 // ↑↑↑
-import './UniswapWidget';
+import './UniswapWidget.scss';
 
 const TOKEN_LIST = 'https://ipfs.io/ipns/tokens.uniswap.org'
 const UNI = '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984'
@@ -23,12 +23,9 @@ const UniswapWidget = () => {
 
   return (
     <div>
-      <div ref={connectors} tabIndex={-1}>
-        <Web3Connectors />
-      </div>
-
-      <div className=''>
-        <SwapWidget
+      <h2 className="swap-title">Swap</h2>
+      <div className='swap-block'>
+        <SwapWidget 
           jsonRpcEndpoint={JSON_RPC_URL}
           tokenList={TOKEN_LIST}
           provider={provider}
@@ -37,8 +34,11 @@ const UniswapWidget = () => {
           defaultInputTokenAddress='0x7910737759c35533f1fd6c49adead1869573cdfc'
           defaultInputAmount="1"
           defaultOutputTokenAddress={UNI}
-          
+          width='100%'
         />
+      </div>
+      <div ref={connectors} tabIndex={-1}>
+        <Web3Connectors />
       </div>
     </div>
   )
