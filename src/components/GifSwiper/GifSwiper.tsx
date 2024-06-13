@@ -41,11 +41,10 @@ const GifSwiper = () => {
         <Card
           numb={1}
           phase="Phase 1"
-          title="The Brainstorming"
+          title="Foundation and Launch"
           descr={`
-              - Sketched initial coin design on a napkin at Chili's.
-              - Announced the coin to the office and got a standing ovation (from myself).
-              - Idea conceived during a particularly inspiring episode of "Entourage."
+              - Launch a top–notch, user–friendly website for all things $PAPER.
+              - Integrate a swap feature for easy $PAPER and crypto trades.
           `}
           gif={Gif7}
         />
@@ -54,11 +53,10 @@ const GifSwiper = () => {
         <Card
           numb={2}
           phase="Phase 2"
-          title="The Launchening"
+          title="Marketing & Game Development"
           descr={`
-            - Official launch of Michael Scott’s Paper Coin with a celebratory office party and an ice sculpture of myself.
-            - First press release written.
-            - Coin listed on Creed's list of "Sure Things" alongside his savings in the Cayman Islands.
+            - Start crafting the “Threat Level Midnight Game – think "Office Olympics" but with $PAPER.
+            - Kick off a massive marketing blitz to put $PAPER on the map.
           `}
           gif={Gif1}
         />
@@ -67,11 +65,12 @@ const GifSwiper = () => {
         <Card
           numb={3}
           phase="Phase 3"
-          title="To the Moon"
+          title="Enhanced Game Development"
           descr={`
-            - Host a seminar on financial freedom.
-            - Partner with local Scranton businesses to accept Michael Scott’s Paper Coin (Alfredo's Pizza Café said maybe).
-            - Release limited edition "Prison Mike" tokens to remind holders that the real value is freedom.
+            - Introduce companions
+            - Add exciting new guns
+            - Integrate wallet functionality
+            - Design epic boss fights
           `}
           gif={Gif2}
         />
@@ -80,11 +79,10 @@ const GifSwiper = () => {
         <Card
           numb={4}
           phase="Phase 4"
-          title="The Diversificationing"
+          title="Branding and Merchandise"
           descr={`
-            - Launch "Threat Level Midnight" NFT series, because who wouldn't want a digital piece of Michael Scarn?
-            - Begin work on "Michael's Mansion" in Decentraland, a virtual office where we can all hang out (virtually).
-            - Introduce "Dundie Rewards" program where you can earn actual Dundies by hodling.
+            - Launch a $PAPER merch line – because who doesn't want that?
+            - Keep the game fresh with new expansions.
           `}
           gif={Gif4}
         />
