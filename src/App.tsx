@@ -21,8 +21,6 @@ import Detox from './image/DEXTools_+white.png'
 import PersonGame from './image/game-person-phg.png'
 import Game from './image/game-png.png'
 
-const LinkToGame = 'https://paveleon.itch.io/scarnoffice';
-
 export default function App() {
 
   return (
