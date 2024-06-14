@@ -6,6 +6,7 @@ import SocialIcon from './components/SocialIcons/SocialIcons.jsx'
 import JustifiedGallery from './components/JustifiedGallery/JustifiedGallery'
 import UniswapWidget from './components/UniswapWidget/UniswapWidget'
 import GifSwiper from './components/GifSwiper/GifSwiper'
+import GameModal from './components/GameModal/GameModal';
 
 //styles
 import './index.scss'
@@ -20,12 +21,22 @@ import PersonImg from './image/main-person.png'
 import Detox from './image/DEXTools_+white.png'
 import PersonGame from './image/game-person-phg.png'
 import Game from './image/game-png.png'
+import { useState } from 'react'
 
 export default function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <div className="App">
-      <Navigation />
+      <Navigation openModal={openModal} />
       <section className="main">
         <div className="container">
           <div className="main__wrapper">
@@ -55,7 +66,7 @@ export default function App() {
             <img src={PersonGame} alt="bg" className="game__person" />
             <div className="game__btn-blok">
               <img src={Game} alt="game" className="game__img" />
-              <Button text="The Game!"/>
+              <Button text="The Game!" onClick={openModal} />
             </div>
           </div>
         </div>
@@ -101,6 +112,7 @@ export default function App() {
           </div>
         </div>
       </footer>
+      <GameModal isOpen={isModalOpen} closeModal={closeModal} />
     </div>
   )
 }
