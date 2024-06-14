@@ -18,10 +18,8 @@ const Button: React.FunctionComponent<ButtonProps> = ({ src, alt, text, variant 
   } else {
     return (
       <a
-        href='https://app.uniswap.org/explore/tokens/base/0x7910737759c35533f1fd6c49adead1869573cdfc'
+        href='#swap'
         className='btn'
-        target='_blank'
-        rel='noreferrer'
       >
         {src && <img src={src} alt={alt} />}
         <span className="btn__text btn__text--phone">{text}</span>

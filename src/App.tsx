@@ -71,7 +71,7 @@ export default function App() {
           </div>
         </div>
       </section>
-      <section className="swap main-padding">
+      <section className="swap main-padding" id='swap'>
         <div className="container">
           <div className="swap__wrapper-bg">
             <div className="swap__box">
