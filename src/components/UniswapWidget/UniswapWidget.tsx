@@ -27,7 +27,7 @@ const CUSTOM_TOKENS: Token[] = [
     name: 'Michael Scott',
     symbol: 'PAPER',
     decimals: 18,
-    logoURI: 'https://s2.coinmarketcap.com/static/img/coins/64x64/8847.png',
+    logoURI: 'https://imgproxy-mainnet.avascan.com/UqQfiSG5RD8FMjANsTt-DZUbgc7WqCtPJ2N674nb1nk/pr:thumb_32/aHR0cHM6Ly9jbXMtY2RuLmF2YXNjYW4uY29tL2NtczIvTWljaGFlbCBTY290dC43OWIzMTliMzE4NjM',
   },
   {
     "chainId": 1,
