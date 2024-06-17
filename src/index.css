@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 html,
 body {
   padding: 0;
@@ -13,4 +16,10 @@ a {
 
 * {
   box-sizing: border-box;
+}
+.modal-open {
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  touch-action: none;
+  -ms-touch-action: none;
 }

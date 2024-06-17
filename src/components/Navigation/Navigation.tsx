@@ -1,49 +1,53 @@
-import React, {  useEffect } from 'react'
-import Logo from '../Logo/Logo.jsx'
-import Button from '../Button/Button'
-import Menu from './Burger/Menu'
-import SocialIcon from '../SocialIcons/SocialIcons.jsx'
-import BtnIcon from '../../image/wallet.svg'
-import HeaderLink from '../../image/headerlink.png'
-import BurgerButton from './Burger/BurgerButton/BurgerButton'
+import React, { useEffect } from 'react';
+import Logo from '../Logo/Logo.jsx';
+import Button from '../Button/Button';
+import Menu from './Burger/Menu';
+import SocialIcon from '../SocialIcons/SocialIcons.jsx';
+import BtnIcon from '../../image/wallet.svg';
+import HeaderLink from '../../image/headerlink.png';
+import BurgerButton from './Burger/BurgerButton/BurgerButton';
 
 //styles
-import './Navigation.scss'
+import './Navigation.scss';
 
-type AnyEvent = MouseEvent | TouchEvent
+type AnyEvent = MouseEvent | TouchEvent;
 
 const useOnClickOutside = (ref: any, handler: (event: AnyEvent) => void) => {
   useEffect(() => {
     const listener = (event: AnyEvent) => {
-      if (!ref.current || ref.current.contains(event.target as Node)) return
-      handler(event)
-    }
-    document.addEventListener('mousedown', listener)
-    document.addEventListener('touchstart', listener)
+      if (!ref.current || ref.current.contains(event.target as Node)) return;
+      handler(event);
+    };
+    document.addEventListener('mousedown', listener);
+    document.addEventListener('touchstart', listener);
 
     return () => {
-      document.removeEventListener('mousedown', listener)
-      document.removeEventListener('touchstart', listener)
-    }
-  }, [ref, handler])
-}
+      document.removeEventListener('mousedown', listener);
+      document.removeEventListener('touchstart', listener);
+    };
+  }, [ref, handler]);
+};
 
-const Navigation = () => {
-  const [open, setOpen] = React.useState(false)
-  const node = React.useRef()
-  useOnClickOutside(node, () => setOpen(false))
+type NavigationProps = {
+  openModal: () => void;
+};
+
+const Navigation: React.FC<NavigationProps> = ({ openModal }) => {
+  const [open, setOpen] = React.useState(false);
+  const node = React.useRef();
+  useOnClickOutside(node, () => setOpen(false));
 
   React.useEffect(() => {
     if (open) {
-      document.body.style.overflow = 'hidden'
+      document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = ''
+      document.body.style.overflow = '';
     }
 
     return () => {
-      document.body.style.overflow = ''
-    }
-  }, [open])
+      document.body.style.overflow = '';
+    };
+  }, [open]);
 
   return (
     <div className="header">
@@ -53,7 +57,7 @@ const Navigation = () => {
           <div className="header__nav-web__wrapper">
             <SocialIcon />
             <Button variant='secondary' src={BtnIcon} alt="wallet-icon" text="BUY $PAPER" />
-            <Button src={HeaderLink} alt="game-img" />
+            <Button src={HeaderLink} alt="game-img" onClick={openModal} />
           </div>
         </div>
         <div className="header__nav-phone" ref={node as any}>
@@ -65,7 +69,7 @@ const Navigation = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;
