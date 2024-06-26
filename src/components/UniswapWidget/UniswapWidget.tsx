@@ -59,27 +59,6 @@ const UniswapWidget: React.FC = () => {
         }
       });
     return () => controller.abort();
-    // async function fetchTokenList() {
-    //   try {
-    //     const response = await fetch(TOKEN_LIST_URL)
-    //     if (!response.ok) {
-    //       throw new Error(`HTTP error! status: ${response.status}`)
-    //     }
-    //     const tokenList = await response.json()
-    //     if (!Array.isArray(tokenList.tokens) || tokenList.tokens.length === 0) {
-    //       throw new Error("Token list is empty or not an array");
-    //     }
-
-    //     const mergedTokens = [...tokenList.tokens.slice(0, 1), ...CUSTOM_TOKENS]
-    //     console.log('Merged Token List:', mergedTokens)
-    //     setTokens(tokenList.tokens)
-    //   } catch (error) {
-    //     console.error('Error fetching token list:', error)
-    //     setTokens(CUSTOM_TOKENS)
-    //   }
-    // }
-
-    // fetchTokenList()
   }, [])
 
   return (
@@ -88,7 +67,7 @@ const UniswapWidget: React.FC = () => {
       <div className="swap-block">
         <SwapWidget
           jsonRpcEndpoint={JSON_RPC_URL}
-          tokenList={tokens} // Передаем список токенов
+          tokenList={tokens}
           provider={provider}
           locale="en-Us"
           onConnectWallet={focusConnectors}

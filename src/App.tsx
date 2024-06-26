@@ -4,14 +4,14 @@ import Input from './components/Input/Input.jsx'
 import Button from './components/Button/Button'
 import SocialIcon from './components/SocialIcons/SocialIcons.jsx'
 import JustifiedGallery from './components/JustifiedGallery/JustifiedGallery'
-import UniswapWidget from './components/UniswapWidget/UniswapWidget'
+// import UniswapWidget from './components/UniswapWidget/UniswapWidget'
 import GifSwiper from './components/GifSwiper/GifSwiper'
 import GameModal from './components/GameModal/GameModal';
 
 //styles
 import './index.scss'
 import 'swiper/css'
-// import 'swiper/css';
+import 'swiper/css';
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
@@ -75,7 +75,13 @@ export default function App() {
         <div className="container">
           <div className="swap__wrapper-bg">
             <div className="swap__box">
-              <UniswapWidget />
+              {/* <UniswapWidget /> */}
+              <iframe
+                src="https://app.uniswap.org/#/swap?exactField=input&exactAmount=10&inputCurrency=0x6b175474e89094c44da98b954eedeac495271d0f"
+                height="600px"
+                width="100%"
+                title="Uniswap Swap Widget"
+              />
             </div>
           </div>
         </div>
