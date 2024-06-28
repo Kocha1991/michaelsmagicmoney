@@ -7,6 +7,7 @@ import JustifiedGallery from './components/JustifiedGallery/JustifiedGallery'
 // import UniswapWidget from './components/UniswapWidget/UniswapWidget'
 import GifSwiper from './components/GifSwiper/GifSwiper'
 import GameModal from './components/GameModal/GameModal';
+import SwapInfo from './components/SwapInfo/SwapInfo';
 
 //styles
 import './index.scss'
@@ -83,6 +84,7 @@ export default function App() {
                 title="Uniswap Swap Widget"
               />
             </div>
+            <SwapInfo/>
           </div>
         </div>
       </section>

@@ -225,6 +225,8 @@ code {
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    column-gap: 20px;
     @extend .shadow;
 
     @media (max-width: 992px) {
