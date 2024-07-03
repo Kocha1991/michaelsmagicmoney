@@ -12,11 +12,10 @@ const SwapInfo = () => {
         </svg>
       </button>
       <div className={`swap__instruction-block ${visible ? 'visible' : ''}`}>
-        <p>1) Connect you wallet</p>
-        <p>2) Choose the coin you want to trade</p>
-        <p>3) Choose the Michael Scott $PAPER coin on the list of available coins</p>
-        <p>4) Type the amount, which you want to trade </p>
-        <p>5) Click to the SWAP button</p>
+        <p>1) Connect your Wallet</p>
+        <p>2) Set Network to Base</p>
+        <p>3) To Swap the $PAPER Token, Paste the Contract Address: 0x7910737759c35533f1fd6c49adead1869573cdfc</p>
+        <p>4) Click "Swap"</p>
       </div>
     </div>
   )
