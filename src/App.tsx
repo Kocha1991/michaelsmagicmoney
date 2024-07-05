@@ -76,10 +76,9 @@ export default function App() {
         <div className="container">
           <div className="swap__wrapper-bg">
             <div className="swap__box">
-              {/* <UniswapWidget /> */}
               <iframe
                 src="https://app.uniswap.org/#/swap?exactField=input&exactAmount=10&inputCurrency=0x6b175474e89094c44da98b954eedeac495271d0f"
-                height="600px"
+                height="640px"
                 width="100%"
                 title="Uniswap Swap Widget"
               />
