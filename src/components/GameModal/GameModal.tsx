@@ -25,14 +25,27 @@ const GameModal: React.FunctionComponent<GameModalProps> = ({ isOpen, closeModal
         <div className="modal">
           <div className="modal__content">
             <button className="modal__close" onClick={closeModal}>&times;</button>
-            <iframe
+            {/* old iframe */}
+
+            {/* <iframe
               id="modalIframe"
               allowFullScreen
               width="960"
               height="670"
               title="Game Modal Iframe"
               src="https://itch.io/embed-upload/10663898?color=333333"
-            ></iframe>
+            ></iframe> */}
+
+            {/* new iframe */}
+            <iframe 
+              id="modalIframe"
+              title="Game Modal Iframe"
+              src="https://itch.io/embed-upload/11003816?color=333333" 
+              width="960" 
+              height="670"
+            >
+              <a href="https://paveleon.itch.io/scarnoffice">Play Threat Level Midnight: The Game! on itch.io</a>
+            </iframe>
           </div>
         </div>
       )}

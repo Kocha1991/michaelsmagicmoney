@@ -4,7 +4,6 @@ import Input from './components/Input/Input.jsx'
 import Button from './components/Button/Button'
 import SocialIcon from './components/SocialIcons/SocialIcons.jsx'
 import JustifiedGallery from './components/JustifiedGallery/JustifiedGallery'
-// import UniswapWidget from './components/UniswapWidget/UniswapWidget'
 import GifSwiper from './components/GifSwiper/GifSwiper'
 import GameModal from './components/GameModal/GameModal';
 import SwapInfo from './components/SwapInfo/SwapInfo';
