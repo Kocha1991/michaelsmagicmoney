@@ -58,7 +58,7 @@ code {
 }
 // reused classes
 .container {
-  max-width: 1440px;
+  max-width: 1920px;
   height: 100%;
   margin: 0 auto;
 }
@@ -74,21 +74,56 @@ code {
   height: 100%;
 }
 .main {
-  position: relative;
   width: 100%;
-  background-image: url('./image/banner-main.jpg');
+  height: 885px;
+  background-image: url('./image/main-banner-newUI.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   &__wrapper {
-    display: flex;
-    align-items: end;
-  }
-  &__person-img {
     position: relative;
-    width: 90%;
-    object-fit: cover;
-    z-index: 1;
+    width: 100%;
+    height: 100%;
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+  }
+  &__text-block {
+    max-width: 630px;
+  }
+  &__title {
+    font-family: "Keneda";
+    font-size: 120px;
+    font-weight: 800;
+    line-height: 120px;
+    letter-spacing: 0.08em;
+    text-align: left;
+    color: #ffff;
+    margin-bottom: 40px;
+  }
+  &__btns-grup {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  &__descr {
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 41px;
+    text-align: left;
+    color: #fff;
+    & > span {
+      color: $color-btn-secondary;
+    }
+  }
+  &__lable {
+    position: absolute;
+    width: 231px;
+    height: 231px;
+    bottom: 80px;
+    right: 80px;
   }
 }
 .tokenomics {
@@ -199,7 +234,7 @@ code {
     padding: 15px 25px;
     background-color: rgba(254, 20, 33, 1);
     border-radius: 20px;
-    color: $color-btn;
+    color: $color-btn-secondary;
     z-index: 22;
     @media (max-width: 992px) {
       width: 220px;
@@ -270,7 +305,7 @@ code {
   & .swiper-button-prev::after,
   & .swiper-button-next::after {
     font-size: 22px;
-    color: $color-btn;
+    color: $color-btn-secondary;
   }
   & .swiper {
     margin-left: 80px;
@@ -325,7 +360,7 @@ code {
     line-height: 28px;
     text-align: center;
     margin-bottom: 40px;
-    color: $color-btn;
+    color: $color-btn-secondary;
     @media (max-width: 992px) {
       font-size: 14px;
       margin-bottom: 20px;

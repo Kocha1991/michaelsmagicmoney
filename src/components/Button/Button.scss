@@ -2,16 +2,17 @@
 @import '../../styles/extend.scss';
 
 .btn {
-  padding: 15px 20px;
-  background-color: $color-btn;
+  width: 180px;
+  height: 56px;
+  background-color: $color-btn-secondary;
   border-radius: 7px;
   border: 1px solid transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  gap: 5px;
-  color: $color-main;
+  gap: 10px;
+  color: #fff;
   transition: all $transition;
   font-family: "Inter";
   font-size: 16px;
@@ -30,18 +31,23 @@
   }
 }
 .btn--game {
-  min-width: 100px;
+  min-width: 180px;
+  background-color: $color-btn-primary;
   height: 56px;
   border-radius: 7px;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
   transition: all $transition;
   text-decoration: none;
-  font-family: "Keneda";
-  font-size: 60px;
-  font-weight: 800;
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 500;
   line-height: 26px;
+  color: #fff;
+  text-transform: uppercase;
   cursor: pointer;
   @media (max-width: 992px) {
     font-size: 30px;

@@ -1,12 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Logo from '../Logo/Logo.jsx';
 import Button from '../Button/Button';
 import Menu from './Burger/Menu';
 import SocialIcon from '../SocialIcons/SocialIcons.jsx';
-import BtnIcon from '../../image/wallet.svg';
-import HeaderLink from '../../image/headerlink.png';
 import BurgerButton from './Burger/BurgerButton/BurgerButton';
 
+import { ImageEnum } from '../../types/imagesEnum';
 //styles
 import './Navigation.scss';
 
@@ -33,11 +32,11 @@ type NavigationProps = {
 };
 
 const Navigation: React.FC<NavigationProps> = ({ openModal }) => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const node = React.useRef();
   useOnClickOutside(node, () => setOpen(false));
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (open) {
       document.body.style.overflow = 'hidden';
     } else {
@@ -54,10 +53,17 @@ const Navigation: React.FC<NavigationProps> = ({ openModal }) => {
       <div className="container">
         <div className="header__nav-web">
           <Logo />
+          <ul className='navigation navigation--web'>
+            <li className='navigation__item'>About us</li>
+            <li className='navigation__item'>Game</li>
+            <li className='navigation__item'>Buy $PAPER</li>
+            <li className='navigation__item'>Our way</li>
+            <li className='navigation__item'>Memes</li>
+          </ul>
           <div className="header__nav-web__wrapper">
             <SocialIcon />
-            <Button variant='secondary' src={BtnIcon} alt="wallet-icon" text="BUY $PAPER" />
-            <Button src={HeaderLink} alt="game-img" onClick={openModal} />
+            <Button src={ImageEnum.Play} alt="play-icon" onClick={openModal} text="Play"/>
+            <Button variant='secondary' src={ImageEnum.WalletWight} alt="wallet-icon" text="BUY $PAPER" />
           </div>
         </div>
         <div className="header__nav-phone" ref={node as any}>

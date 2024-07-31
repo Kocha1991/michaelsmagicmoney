@@ -17,11 +17,11 @@ import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 
 // images
-import PersonImg from './image/main-person.png'
 import Detox from './image/DEXTools_+white.png'
 import PersonGame from './image/game-person-phg.png'
 import Game from './image/game-png.png'
 import { useState } from 'react'
+import { ImageEnum } from './types/imagesEnum'
 
 export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -40,7 +40,27 @@ export default function App() {
       <section className="main">
         <div className="container">
           <div className="main__wrapper">
-            <img src={PersonImg} alt="person-img" className="main__person-img" />
+            <div className="main__text-block">
+              <h1 className='main__title'>MICHAEL SCOTT’S PAPER</h1>
+              <div className='main__btns-grup'>
+                <Button 
+                  variant='secondary' 
+                  src={ImageEnum.WalletWight} 
+                  alt="wallet-icon" 
+                  text="BUY $PAPER" 
+                />
+                <Button 
+                  src={ImageEnum.Play} 
+                  alt="play-icon" 
+                  onClick={openModal} 
+                  text="Play"
+                />
+              </div>
+              <h2 className='main__descr'>
+                Welcome to <span>$PAPER</span>, Making the world a better place, one Toby-free transaction at a time.
+              </h2>
+            </div>
+            <img src={ImageEnum.PaperLable} alt="paper-lable" className='main__lable'/>
           </div>
         </div>
       </section>

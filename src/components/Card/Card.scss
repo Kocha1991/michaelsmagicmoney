@@ -15,7 +15,7 @@
   font-weight: 700;
   line-height: 25.6px;
   text-align: left;
-  color: $color-btn;
+  color: $color-btn-secondary;
   &::before {
     content: '';
     position: absolute;
@@ -33,13 +33,13 @@
     left: 48px;
     width: 100vw;
     height: 3px;
-    background-color: $color-btn;
+    background-color: $color-btn-secondary;
   }
 }
 .card {
   width: 320px;
   padding: 25px;
-  background-color: $color-btn;
+  background-color: $color-btn-secondary;
   border-radius: 0px 10px 10px 10px;
   @media (max-width: 769px) {
     width: 95%;

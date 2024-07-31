@@ -7,7 +7,13 @@ type ButtonProps = {
   onClick?: () => void;
 } & ({ src: string; alt: string } | { src?: never; alt?: never });
 
-const Button: React.FunctionComponent<ButtonProps> = ({ src, alt, text, variant = "primary", onClick }) => {
+const Button: React.FunctionComponent<ButtonProps> = ({ 
+  src, 
+  alt, 
+  text, 
+  variant = "primary", 
+  onClick 
+}) => {
   if (variant === "primary") {
     return (
       <button className='btn--game' onClick={onClick}>

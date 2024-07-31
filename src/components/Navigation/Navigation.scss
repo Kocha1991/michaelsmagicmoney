@@ -12,7 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 40px;
     &__wrapper {
       display: flex;
       align-items: center;
@@ -34,6 +34,40 @@
       justify-content: space-between;
       z-index: 20;
     }
+  }
+}
+.navigation {
+  max-width: 665px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24.2px;
+  list-style: none;
+  color: #ffff;
+  &__item {
+    cursor: pointer
+  }
+  &__item:hover {
+    color: $color-btn-secondary;
+    scale: 105%;
+    transition: $transition;
+  }
+
+  &--web {
+
+  }
+}
+@media (max-width: 1520px) {
+  .header__nav-web {
+    gap: 20px
+  }
+  .navigation {
+    font-size: 16px;
+    font-weight: 400;
+    gap: 20px;
   }
 }
 @media (max-width: 992px) {
