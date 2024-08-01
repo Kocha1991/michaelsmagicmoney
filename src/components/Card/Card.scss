@@ -15,7 +15,6 @@
   font-weight: 700;
   line-height: 25.6px;
   text-align: left;
-  color: $color-btn-secondary;
   &::before {
     content: '';
     position: absolute;
@@ -32,14 +31,16 @@
     top: 50%;
     left: 48px;
     width: 100vw;
-    height: 3px;
+    border-top: 3px dotted $color-btn-secondary;
     background-color: $color-btn-secondary;
   }
 }
 .card {
   width: 320px;
+  height: 430px;
   padding: 25px;
-  background-color: $color-btn-secondary;
+  background: linear-gradient(112.11deg, rgba(130, 31, 120, 0.25) -1.29%, rgba(1, 51, 98, 0.25) 62.71%);
+
   border-radius: 0px 10px 10px 10px;
   @media (max-width: 769px) {
     width: 95%;

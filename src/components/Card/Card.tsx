@@ -6,11 +6,16 @@ type CardProps = {
   phase: string;
   title: string;
   descr: string;
-  gif: string;
+  gif?: string;
   numb: number;
 }
 
-const Card: React.FunctionComponent<CardProps> = ({phase, title, descr, gif, numb}) => {
+const Card: React.FunctionComponent<CardProps> = ({
+  phase, 
+  title, 
+  descr, 
+  numb
+}) => {
   const lines = descr.split('-').map(line => line.trim()).filter(line => line);
 
   return (
@@ -26,7 +31,7 @@ const Card: React.FunctionComponent<CardProps> = ({phase, title, descr, gif, num
             <p key={index}>- {line}</p>
           ))}
         </div>
-        <img src={gif} alt='gif-icon' />
+        {/* <img src={gif} alt='gif-icon' /> */}
       </div>
     </div>
   )

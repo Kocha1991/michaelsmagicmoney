@@ -8,7 +8,6 @@
   z-index: 101;
   &__nav-web {
     height: 100%;
-    padding: 0 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -24,7 +23,6 @@
     display: none;
     width: 100%;
     height: 100%;
-    padding: 0 20px;
     &__wrapper {
       position: relative;
       background-color: $color-main;
@@ -37,10 +35,7 @@
   }
 }
 .navigation {
-  max-width: 665px;
   display: flex;
-  justify-content: space-between;
-  gap: 40px;
   font-family: Inter;
   font-size: 20px;
   font-weight: 500;
@@ -55,15 +50,51 @@
     scale: 105%;
     transition: $transition;
   }
+  &--web {
+    max-width: 665px;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  &--phone {
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
 }
 @media (max-width: 1520px) {
   .header__nav-web {
     gap: 20px
   }
-  .navigation {
+  .navigation--web {
     font-size: 16px;
     font-weight: 400;
     gap: 20px;
+  }
+}
+@media (max-width: 1340px) {
+  .header
+  .logo {
+    font-size: 37px;
+  }
+  .header__nav-web
+  .social {
+    gap: 20px;
+    padding: 0;
+  }
+  .header__nav-web {
+    padding: 0;
+  }
+  .header__nav-web .btn,
+  .header__nav-web .btn--game {
+    min-width: 60px;
+  }
+  .header__nav-web .btn span,
+  .header__nav-web .btn--game span {
+    display: none;
   }
 }
 @media (max-width: 992px) {

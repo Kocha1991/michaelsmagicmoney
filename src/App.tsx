@@ -18,8 +18,6 @@ import 'swiper/css/scrollbar'
 
 // images
 import Detox from './image/DEXTools_+white.png'
-import PersonGame from './image/game-person-phg.png'
-import Game from './image/game-png.png'
 import { useState } from 'react'
 import { ImageEnum } from './types/imagesEnum'
 
@@ -60,41 +58,123 @@ export default function App() {
                 Welcome to <span>$PAPER</span>, Making the world a better place, one Toby-free transaction at a time.
               </h2>
             </div>
+            <div className='main__btns-grup--phone'>
+              <Button 
+                variant='secondary' 
+                src={ImageEnum.WalletWight} 
+                alt="wallet-icon" 
+                text="BUY $PAPER" 
+              />
+              <Button 
+                src={ImageEnum.Play} 
+                alt="play-icon" 
+                onClick={openModal} 
+                text="Play"
+              />
+            </div>
             <img src={ImageEnum.PaperLable} alt="paper-lable" className='main__lable'/>
           </div>
         </div>
       </section>
       <section className="tokenomics main-padding">
         <div className="container">
-          <div className="tokenomics__bg--phone"></div>
-          <div className="tokenomics__bg">
-            <div className="tokenomics__cards">
-              <OptionCard variant='link' href="https://basescan.org/tx/0xbb45693c8e78f481eaef4fae422791db2b2772ab5c4d6ef86ba0ae403c6650f4" subHeader="88%" text="OF LP ADDED & BURNED" />
-              <OptionCard variant='not-link' href="/" subHeader="9.28 Billion" text="Circulating Supply" />
-              <OptionCard variant='link' href="https://basescan.org/tx/0xaa367e7b6e30f4f2afa5a687044d7730c99853f6239c4b4f331133bee498e8e1" subHeader="Contract Renounced" />
-
-              <OptionCard variant='link' href="https://basescan.org/token/0x7910737759c35533f1fd6c49adead1869573cdfc?a=0x000000000000000000000000000000000000dead" subHeader="7%" text="BURNED" />
-              <OptionCard variant='not-link' href="/" subHeader="0/0" text="TAX" />
-              <OptionCard variant='not-link' href="/" subHeader="5%" text="TEAM WALLET" />
+          <div className='tokenomics__wrapper'>
+            <div className='tokenomics__info'>
+              <h2 className='tokenomics__title'>
+                What is
+                <span 
+                  className='tokenomics__title tokenomics__title--blue'>
+                  $Paper ?
+                </span>
+              </h2>
+              <h3 className='tokenomics__descr'>
+                Imagine if Dunder Mifflin had a baby with Bitcoin, and that baby was raised by Michael Scott. That's PAPER. It's the digital currency that makes you feel like you just closed a big sale, got a Dundie, and had a Pretzel Day all at once. With PAPER, you can buy all sorts of cool stuff in 'Threat Level Midnight: The Game,' Weapons, special abilities, and even unlock characters who are almost as awesome as me. It's the only currency that Toby can't touch, and trust me, that makes it priceless. So, get ready to dive into the world of PAPER, where every transaction is a win and every token is a ticket to fun!
+              </h3>
+              <div className='tokenomics__btns-grup'>
+                <Button 
+                    variant='secondary' 
+                    text="Contract renouced" 
+                  />
+                  <Button 
+                    src={ImageEnum.Play} 
+                    alt="play-icon" 
+                    onClick={openModal} 
+                    text="Play"
+                  />
+              </div>
+            </div>
+            <img src={ImageEnum.TokenomicsImg} alt="img" className='tokenomics__img'/>
+          </div>
+          <div className="tokenomics__cards">
+            <OptionCard 
+              variant='link' 
+              href="https://basescan.org/tx/0xbb45693c8e78f481eaef4fae422791db2b2772ab5c4d6ef86ba0ae403c6650f4" 
+              subHeader="88%" 
+              text="OF LP ADDED & BURNED" 
+            />
+            <OptionCard 
+              variant='not-link' 
+              href="/" 
+              subHeader="9.28 Billion" 
+              text="Circulating Supply" 
+            />
+            <OptionCard 
+              variant='link' 
+              href="https://basescan.org/token/0x7910737759c35533f1fd6c49adead1869573cdfc?a=0x000000000000000000000000000000000000dead" subHeader="7%" 
+              text="BURNED" 
+            />
+            <OptionCard 
+              variant='not-link' 
+              href="/" 
+              subHeader="0/0" 
+              text="TAX" 
+            />
+            <OptionCard 
+              variant='not-link' 
+              href="/" 
+              subHeader="5%" 
+              text="TEAM WALLET" 
+            />
+          </div>
+        </div>
+      </section>
+      <section className="game main-padding">
+        <div className="container">
+          <div className='game__grid'>
+            <img 
+              src={ImageEnum.GameBannerTheGame} 
+              alt="game-banner" 
+              className='game__banner-game'
+            />
+            <img 
+              src={ImageEnum.GameBannerPeople} 
+              alt="banner" 
+              className='game__banner-people'
+            />
+            <img 
+              src={ImageEnum.GameGif} 
+              alt="game-gif" 
+              className='game__gif'
+            />
+            <div className='game__descr-block'>
+              <h2 className='game__title'>Threat level midnight</h2>
+              <h3 className='game__descr'>
+                Step into the shoes of secret agent Michael Scott in Threat Level Midnight: The Game! Navigate through high-stakes missions, outsmart villains, and save the world from total destruction. Are you ready to accept the challenge and become the ultimate hero? The fate of the world depends on you!
+              </h3>
+              <Button 
+                src={ImageEnum.Play} 
+                alt="play-icon" 
+                onClick={openModal} 
+                text="Play"
+              />
             </div>
           </div>
         </div>
       </section>
-      <section className="game">
+      <section className="swap" id='swap'>
         <div className="container">
-          <div className="game__bg">
-            <img src={PersonGame} alt="bg" className="game__person" />
-            <div className="game__btn-blok">
-              <img src={Game} alt="game" className="game__img" />
-              <Button text="The Game!" onClick={openModal} />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="swap main-padding" id='swap'>
-        <div className="container">
-          <div className="swap__wrapper-bg">
             <div className="swap__box">
+              <SwapInfo/>
               <iframe
                 src="https://app.uniswap.org/#/swap?exactField=input&exactAmount=10&inputCurrency=0x6b175474e89094c44da98b954eedeac495271d0f"
                 height="640px"
@@ -102,12 +182,17 @@ export default function App() {
                 title="Uniswap Swap Widget"
               />
             </div>
-            <SwapInfo/>
-          </div>
         </div>
       </section>
       <section className="phases main-padding">
         <div className="container">
+          <h2 className='tokenomics__title phases__title'>
+            Roadmap
+            <span 
+              className='tokenomics__title tokenomics__title--blue'>
+              $Paper ?
+            </span>
+          </h2>
           <div className="phases__wrapper">
             <GifSwiper />
             <div className="phases__nav-btns">

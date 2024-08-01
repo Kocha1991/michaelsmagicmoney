@@ -1,5 +1,8 @@
+@import '../../styles/_variables';
+
 .swap {
   &__instruction {
+    margin-bottom: 24px;
     position: relative;
     height: fit-content;
     &-button {
@@ -16,19 +19,12 @@
       position: absolute;
       left: 0;
       top: 60px;
-      background-color: #f0f0f0;
+      background-color: $color-main;
       border-radius: 15px;
       padding: 15px;
       width: 415px;
       opacity: 0;
       transition: opacity 0.3s ease;
-      @media (max-width: 1100px) {
-        left: -207px;
-      }
-      @media (max-width: 840px) {
-        left: initial;
-        right: 0;
-      }
       @media (max-width: 475px) {
         width: calc(100vw - 30px);
       }

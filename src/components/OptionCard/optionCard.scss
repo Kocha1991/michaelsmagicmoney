@@ -2,15 +2,15 @@
 @import '../../styles/extend.scss';
 
 .option-card {
-  width: 400px;
-  min-height: 143px;
-  padding: 5px;
+  width: 340px;
+  min-height: 171px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  background: rgba(1, 59, 169, 0.6);
+  border-radius: 16px;
+  background: linear-gradient(112.11deg, rgba(130, 31, 120, 0.25) -1.29%, rgba(1, 51, 98, 0.25) 62.71%);
   text-decoration: none;
   cursor: pointer;
   transition: all $transition;
@@ -31,7 +31,7 @@
     font-weight: 700;
     line-height: 76px;
     letter-spacing: 0.02em;
-    color: $color-btn-secondary;
+    color: #fff;
     @media (max-width: 992px) {
       font-size: 40px;
       line-height: 36.03px;
@@ -39,7 +39,7 @@
   }
   &__text {
     font-family: "Archivo", sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
     line-height: 36.03px;
     text-align: center;
