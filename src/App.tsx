@@ -55,7 +55,8 @@ export default function App() {
                 />
               </div>
               <h2 className='main__descr'>
-                Welcome to <span>$PAPER</span>, Making the world a better place, one Toby-free transaction at a time.
+                Welcome to 
+                <span className='tokenomics__title--blue'>$PAPER</span>, Making the world a better place, one Toby-free transaction at a time.
               </h2>
             </div>
             <div className='main__btns-grup--phone'>
@@ -201,6 +202,27 @@ export default function App() {
             </div>
           </div>
         </div>
+      </section>
+      <section className='bringing'>
+        <div className="container">
+          <h2 className='bringing__title tokenomics__title'>
+            <span 
+              className='tokenomics__title tokenomics__title--blue'>
+              Bringing Humor
+            </span>
+            to Your Crypto Journey
+          </h2>
+          <h3 className='bringing__descr'>
+            Dive into the PAPER Meme Zone! That's what she said!
+          </h3>
+          <Button 
+            variant='secondary' 
+            src={ImageEnum.WalletWight} 
+            alt="wallet-icon" 
+            text="BUY $PAPER" 
+          />
+        </div>
+        <div className='bringing__bg'></div>
       </section>
       <section className="main-padding">
         <JustifiedGallery />

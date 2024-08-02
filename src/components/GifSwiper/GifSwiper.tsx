@@ -21,13 +21,13 @@ const GifSwiper = () => {
       spaceBetween={30}
       slidesPerView={1}
       breakpoints={{
-        780: {
+        830: {
           slidesPerView: 2,
         },
-        1060: {
+        1200: {
           slidesPerView: 3,
         },
-        1400: {
+        1600: {
           slidesPerView: 4,
         },
       }}
@@ -41,10 +41,11 @@ const GifSwiper = () => {
         <Card
           numb={1}
           phase="Phase 1"
-          title="Foundation and Launch"
+          title="The Brainstorming"
           descr={`
-              - Launch a top–notch, user–friendly website for all things $PAPER.
-              - Integrate a swap feature for easy $PAPER and crypto trades.
+              - Sketched initial coin design on a napkin at Chili's.
+              - Announced the coin to the office and got a standing ovation (from myself).
+              - Idea conceived during a particularly inspiring episode of "Entourage."
           `}
           gif={Gif7}
         />
@@ -53,10 +54,11 @@ const GifSwiper = () => {
         <Card
           numb={2}
           phase="Phase 2"
-          title="Marketing & Game Development"
+          title="The Launchening"
           descr={`
-            - Start crafting the “Threat Level Midnight Game – think "Office Olympics" but with $PAPER.
-            - Kick off a massive marketing blitz to put $PAPER on the map.
+            - Official launch of Michael Scott’s Paper Coin with a celebratory office party and an ice sculpture of myself.
+            - First press release written.
+            - Coin listed on Creed's list of "Sure Things" alongside his savings in the Cayman Islands.
           `}
           gif={Gif1}
         />
@@ -65,12 +67,11 @@ const GifSwiper = () => {
         <Card
           numb={3}
           phase="Phase 3"
-          title="Enhanced Game Development"
+          title="To the Moon"
           descr={`
-            - Introduce companions
-            - Add exciting new guns
-            - Integrate wallet functionality
-            - Design epic boss fights
+            - Host a seminar on financial freedom.
+            - Partner with local Scranton businesses to accept Michael Scott’s Paper Coin (Alfredo's Pizza Café said maybe).
+            - Release limited edition "Prison Mike" tokens to remind holders that the real value is freedom.
           `}
           gif={Gif2}
         />
@@ -79,10 +80,11 @@ const GifSwiper = () => {
         <Card
           numb={4}
           phase="Phase 4"
-          title="Branding and Merchandise"
+          title="The Diversificationing"
           descr={`
-            - Launch a $PAPER merch line – because who doesn't want that?
-            - Keep the game fresh with new expansions.
+            - Launch "Threat Level Midnight" NFT series, because who wouldn't want a digital piece of Michael Scarn?
+            - Begin work on "Michael's Mansion" in Decentraland, a virtual office where we can all hang out (virtually).
+            - Introduce "Dundie Rewards" program where you can earn actual Dundies by hodling.
           `}
           gif={Gif4}
         />
