@@ -194,7 +194,7 @@ export default function App() {
             Roadmap
             <span 
               className='tokenomics__title tokenomics__title--blue'>
-              $Paper ?
+              $Paper
             </span>
           </h2>
           <div className="phases__wrapper">
