@@ -77,7 +77,7 @@ export default function App() {
           </div>
         </div>
       </section>
-      <section className="tokenomics main-padding">
+      <section className="tokenomics main-padding" id='about-us'>
         <div className="container">
           <div className='tokenomics__wrapper'>
             <div className='tokenomics__info'>
@@ -92,16 +92,19 @@ export default function App() {
                 Imagine if Dunder Mifflin had a baby with Bitcoin, and that baby was raised by Michael Scott. That's PAPER. It's the digital currency that makes you feel like you just closed a big sale, got a Dundie, and had a Pretzel Day all at once. With PAPER, you can buy all sorts of cool stuff in 'Threat Level Midnight: The Game,' Weapons, special abilities, and even unlock characters who are almost as awesome as me. It's the only currency that Toby can't touch, and trust me, that makes it priceless. So, get ready to dive into the world of PAPER, where every transaction is a win and every token is a ticket to fun!
               </h3>
               <div className='tokenomics__btns-grup'>
+                {/* <Button 
+                  variant='secondary' 
+                  text="Contract renouced" 
+                /> */}
+                <div className='tokenomics__contract'>
+                  Contract renouced
+                </div>
                 <Button 
-                    variant='secondary' 
-                    text="Contract renouced" 
-                  />
-                  <Button 
-                    src={ImageEnum.Play} 
-                    alt="play-icon" 
-                    onClick={openModal} 
-                    text="Play"
-                  />
+                  src={ImageEnum.Play} 
+                  alt="play-icon" 
+                  onClick={openModal} 
+                  text="Play"
+                />
               </div>
             </div>
             <img src={ImageEnum.TokenomicsImg} alt="img" className='tokenomics__img'/>
@@ -139,7 +142,7 @@ export default function App() {
           </div>
         </div>
       </section>
-      <section className="game main-padding">
+      <section className="game main-padding" id="game">
         <div className="container">
           <div className='game__grid'>
             <img 
@@ -185,7 +188,7 @@ export default function App() {
             </div>
         </div>
       </section>
-      <section className="phases main-padding">
+      <section className="phases main-padding" id="our-way">
         <div className="container">
           <h2 className='tokenomics__title phases__title'>
             Roadmap
@@ -205,26 +208,31 @@ export default function App() {
       </section>
       <section className='bringing'>
         <div className="container">
-          <h2 className='bringing__title tokenomics__title'>
-            <span 
-              className='tokenomics__title tokenomics__title--blue'>
-              Bringing Humor
-            </span>
-            to Your Crypto Journey
-          </h2>
-          <h3 className='bringing__descr'>
-            Dive into the PAPER Meme Zone! That's what she said!
-          </h3>
-          <Button 
-            variant='secondary' 
-            src={ImageEnum.WalletWight} 
-            alt="wallet-icon" 
-            text="BUY $PAPER" 
-          />
+          <div className='bringing__wrapper'>
+            <h2 className='bringing__title tokenomics__title'>
+              <span 
+                className='tokenomics__title tokenomics__title--blue'>
+                Bringing Humor
+              </span>
+              to Your Crypto Journey
+            </h2>
+            <h3 className='bringing__descr'>
+              Dive into the PAPER Meme Zone! That's what she said!
+            </h3>
+            <Button 
+              variant='secondary' 
+              src={ImageEnum.WalletWight} 
+              alt="wallet-icon" 
+              text="BUY $PAPER" 
+            />
+            {/* <div className='bringing__bg'></div> */}
+            <div className='bringing__left-man'></div>
+            <div className='bringing__bullets'></div>
+            <div className='bringing__right-man'></div>
+          </div>
         </div>
-        <div className='bringing__bg'></div>
       </section>
-      <section className="main-padding">
+      <section className="main-padding" id="memes">
         <JustifiedGallery />
       </section>
       <footer className="footer">

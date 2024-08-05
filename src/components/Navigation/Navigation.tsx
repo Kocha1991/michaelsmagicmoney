@@ -4,6 +4,7 @@ import Button from '../Button/Button';
 import Menu from './Burger/Menu';
 import SocialIcon from '../SocialIcons/SocialIcons.jsx';
 import BurgerButton from './Burger/BurgerButton/BurgerButton';
+import { Link } from 'react-scroll';
 
 import { ImageEnum } from '../../types/imagesEnum';
 //styles
@@ -48,17 +49,41 @@ const Navigation: React.FC<NavigationProps> = ({ openModal }) => {
     };
   }, [open]);
 
+  const closeMenu = () => {
+    setOpen(false);
+  }
+
   return (
     <div className="header">
       <div className="container">
         <div className="header__nav-web">
           <Logo />
           <ul className='navigation navigation--web'>
-            <li className='navigation__item'>About us</li>
-            <li className='navigation__item'>Game</li>
-            <li className='navigation__item'>Buy $PAPER</li>
-            <li className='navigation__item'>Our way</li>
-            <li className='navigation__item'>Memes</li>
+            <li className='navigation__item'>
+              <Link to="about-us" smooth={true} duration={100}>
+                About us
+              </Link>
+            </li>
+            <li className='navigation__item'>
+              <Link to="game" smooth={true} duration={100}>
+                Game
+              </Link>
+            </li>
+            <li className='navigation__item'>
+              <Link to="swap" smooth={true} duration={100}>
+                Buy $PAPER
+              </Link>
+            </li>
+            <li className='navigation__item'>
+              <Link to="our-way" smooth={true} duration={100}>
+                Our way
+              </Link>
+            </li>
+            <li className='navigation__item'>
+              <Link to="memes" smooth={true} duration={100}>
+                Memes
+              </Link>
+            </li>
           </ul>
           <div className="header__nav-web__wrapper">
             <SocialIcon />
@@ -71,7 +96,7 @@ const Navigation: React.FC<NavigationProps> = ({ openModal }) => {
             <Logo />
             <BurgerButton isOpen={open} onClick={() => setOpen(prev => !prev)} />
           </div>
-          <Menu isOpen={open} />
+          <Menu isOpen={open} onClose={closeMenu} openModal={openModal}/>
         </div>
       </div>
     </div>
